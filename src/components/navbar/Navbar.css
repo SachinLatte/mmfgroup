@@ -1,0 +1,24 @@
+
+.main-header{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--paragraph-font);
+}
+.main-header .navbar .nav-item .dropdown-menu {
+  display: block;
+  border: none;
+  margin-top: 0;
+  top: 150%;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+
+.main-header .navbar .nav-item:hover .dropdown-menu {
+  top: 100%;
+  visibility: visible;
+  transition: .5s;
+  opacity: 1;
+}
