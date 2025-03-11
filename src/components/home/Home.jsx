@@ -1,9 +1,10 @@
 
 import Banner from "./Banner";
+import CounterSection from "./CounterSection";
 const Home = ()=>{
 return <>
-  <Banner>
-  </Banner>
+  <Banner />
+  <CounterSection />
 </>
 }
 export default Home;
