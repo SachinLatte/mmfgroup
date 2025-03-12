@@ -1,30 +1,52 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import { Thumbs } from 'swiper/modules';
-import { useState } from 'react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Autoplay, Pagination } from 'swiper/modules';
+// import { Thumbs } from 'swiper/modules';
+// import { useState } from 'react';
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/autoplay';
+import Slider from "react-slick";
 
 
 
 import Navbar from "../navbar/Navbar";
 const Banner = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const settings = {
+    customPaging: function(i) {
+      return (
+        <>
+        <a>
+          <h1>1</h1>
+        </a>
+                <a>
+                <h1>2</h1>
+              </a>
+              <a>
+                <h1>3</h1>
+              </a>
+              </>
+      );
+    },
+    dots: true,
+    dotsClass: "slick-dots slick-thumb",
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return <section className="hero-section">
     <Navbar />
     <div>
-      <Swiper className="main-banner"
+      {/* <Swiper className="main-banner"
         modules={[Pagination, Autoplay, Thumbs]}
         pagination={{ clickable: true }}
-        // navigation
         thumbs={{ swiper: thumbsSwiper }}
         loop={true}
         speed={1200}
         slidesPerView={1}
-      // autoplay={{ delay: 2000 }}
-      // autoplay= {{delay : 2000, disableOnInteraction : false}}
+
       >
         <SwiperSlide>
           <div className='text-center'>
@@ -63,7 +85,18 @@ const Banner = () => {
             3
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
+            <Slider {...settings}>
+        <div>
+          <img src="src/assets/img/banner.webp" alt="banner image" />
+        </div>
+        <div>
+        <img src="src/assets/img/banner.webp" alt="banner image" />
+        </div>
+        <div>
+        <img src="src/assets/img/banner.webp" alt="banner image" />
+        </div>
+      </Slider>
     </div>
   </section>
 }

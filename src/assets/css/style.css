@@ -6,11 +6,12 @@
   --primary-color: #2f3192;
   --secondary-color: #a6cf39;
   --common-padding: 6% 0;
+  --tc-shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --bg-color:#15152a;
 }
 
 .custom-container {
-  width: 100%;
-  max-width: 1280px;
+  width: 73%;
   margin: 0 auto;
   display: block;
 }
@@ -46,7 +47,7 @@
 /******************Home Hero Banner Css******************/
 .homepage-counter {
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--bg-color);
   height: 80vh;
   padding: var(--common-padding);
   display: flex;
@@ -62,19 +63,121 @@
 
 .homepage-counter .counter-content hr {
   width: 35%;
-  height: 3px;
+  height: 2px;
   background-color: var(--white);
 }
 
 .homepage-counter .counter-content p {
   color: #a9a9a9;
   font-family: var(--paragraph-font);
-  font-size: 18px;
-  line-height: 35px;
+  font-size: 17px;
+  line-height: 30px;
   letter-spacing: 1px;
   margin-top: 55px;
 }
 
 .homepage-counter .main-counter {
+  color: var(--black);
+  text-align: center;
+}
+.homepage-counter .main-counter span{
+  font-family: var(--paragraph-font);
+  font-size: 90px;
+  -webkit-text-stroke: 1px rgb(255 255 255);
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  position: relative;
+}
+.homepage-counter .main-counter span.kclass::after{
+  position: absolute;
+  content: "k";
+  font-family: var(--paragraph-font);
+  font-size: 80px;
   color: var(--white);
+  right: -50px;
+  top: -7px;
+}
+.homepage-counter .main-counter p{
+  font-family: var(--heading-font);
+  font-size: 21px;
+  color: #a9a9a9;
+  margin: 0;
+  margin-top: -10px;
+}
+.mb-100{
+  margin-bottom: 100px;
+}
+.mt-80{
+  margin-top: 80px;
+}
+.brands-container{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+ margin-top: 100px;
+}
+.brands-carousel{
+  text-align: center;
+  width: 100%;
+  padding: var(--common-padding);
+}
+.brands-carousel .slick-list{
+  height: 90px;
+}
+.brands-carousel h1{
+  font-family: var(--heading-font);
+  font-size: 40px;
+  color: var(--black);
+  text-align: center;
+}
+.brands-carousel .img-box{
+  box-shadow:var(--tc-shadow-1);
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.brands-carousel .img-box:hover img{
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+.brands-carousel .img-box img{
+  width: 80%;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+}
+.brands-carousel .slick-slide{
+  margin-right: 30px;
+}
+.homepage-network{
+  width: 100%;
+  padding: var(--common-padding);
+  background-color: var(--bg-color); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  background-position: center;
+}
+.network-content p{
+  font-size: 16px;
+  font-family: var(--paragraph-font);
+  color: #fff;
+  line-height: 30px;
+}
+.video-section h1{
+font-family: var(--heading-font);
+font-size: 40px;
+color: var(--white);
+}
+.video-section p{
+  font-size: 18px;
+  font-family: var(--paragraph-font);
+  color: #a1cb2c;
+  line-height: 30px;
+}
+.video-section img{
+  width: 100%;
 }

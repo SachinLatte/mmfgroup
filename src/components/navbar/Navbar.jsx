@@ -1,11 +1,10 @@
 import './Navbar.css'
-import myImage from './logo.png'
 const Navbar = ()=>{
   return <div className="main-header">
             <div className="custom-container">
                 <nav className="navbar navbar-expand-lg navbar-light sticky-top p-0">
                       <a href="javascript:void(0)" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
-                          <img src={myImage} alt="logo" />
+                          <img src="src/assets/img/logo.png" alt="logo" />
                       </a>
                       <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                           <span className="navbar-toggler-icon"></span>

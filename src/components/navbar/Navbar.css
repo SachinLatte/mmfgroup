@@ -29,7 +29,7 @@
 }
 
 .main-header .navbar .navbar-nav a.active {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .main-header .navbar .navbar-nav a::before {
